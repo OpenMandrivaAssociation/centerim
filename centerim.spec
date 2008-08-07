@@ -1,6 +1,6 @@
 %define name centerim
 %define version 4.22.5
-%define release %mkrel 1
+%define release %mkrel 2
 
 Version:	%{version}
 Summary:	Console ncurses based multi-protocol instant messenger
