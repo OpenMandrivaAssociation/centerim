@@ -1,6 +1,6 @@
 %define name centerim
-%define version 4.22.5
-%define release %mkrel 2
+%define version 4.22.7
+%define release %mkrel 1
 
 Version:	%{version}
 Summary:	Console ncurses based multi-protocol instant messenger
@@ -8,7 +8,7 @@ Name:		%{name}
 Release:	%{release}
 License:	GPLv2+ and LGPLv2+
 Group:		Networking/Instant messaging
-Source:		http://www.centerim.org/download/releases/%{name}-%{version}.tar.gz
+Source:		http://www.centerim.org/download/releases/%{name}-%{version}.tar.bz2
 URL:		http://www.centerim.org
 Buildrequires:	ncurses-devel
 BuildRequires:	openssl-devel
@@ -31,7 +31,7 @@ CenterIM is a fork of the CenterICQ project.
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
@@ -46,9 +46,9 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr (-,root,root)
 %doc README TODO AUTHORS
+%{_bindir}/CenterIMLog2HTML.py
 %{_bindir}/centerim
 %{_bindir}/cimconv
 %{_mandir}/man1/centerim.1*
 %{_mandir}/man1/cimconv.1*
-%{_datadir}/%{name}/
-%{_datadir}/%{name}/*.wav
+%{_datadir}/%{name}
