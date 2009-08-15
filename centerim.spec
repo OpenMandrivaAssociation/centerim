@@ -1,5 +1,5 @@
 %define name centerim
-%define version 4.22.7
+%define version 4.22.8
 %define release %mkrel 1
 
 Version:	%{version}
