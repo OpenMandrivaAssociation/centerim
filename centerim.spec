@@ -1,14 +1,10 @@
-%define name centerim
-%define version 4.22.9
-%define release %mkrel 3
-
-Version:	%{version}
+Name:		centerim
 Summary:	Console ncurses based multi-protocol instant messenger
-Name:		%{name}
-Release:	%{release}
+Version:	4.22.10
+Release:	%mkrel 1
 License:	GPLv2+ and LGPLv2+
 Group:		Networking/Instant messaging
-Source:		http://www.centerim.org/download/releases/%{name}-%{version}.tar.bz2
+Source:		http://www.centerim.org/download/releases/%{name}-%{version}.tar.gz
 URL:		http://www.centerim.org
 Buildrequires:	ncurses-devel
 BuildRequires:	openssl-devel
@@ -18,7 +14,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	gpgme-devel
 Obsoletes:	centericq
 Provides:	centericq
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 CenterIM is a text mode menu- and window-driven instant messenger. ICQ,
@@ -35,13 +31,13 @@ CenterIM is a fork of the CenterICQ project.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %buildroot
 %makeinstall_std
 
 %find_lang %name
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %buildroot
 
 %files -f %{name}.lang
 %defattr (-,root,root)
@@ -52,3 +48,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/centerim.1*
 %{_mandir}/man1/cimconv.1*
 %{_datadir}/%{name}
+%{_bindir}/cimformathistory
+%{_bindir}/cimextracthistory.pl
