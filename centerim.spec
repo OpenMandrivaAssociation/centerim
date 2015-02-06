@@ -3,7 +3,7 @@
 Name:		centerim
 Summary:	Console ncurses based multi-protocol instant messenger
 Version:	4.22.10
-Release:	2
+Release:	3
 License:	GPLv2+ and LGPLv2+
 Group:		Networking/Instant messaging
 Source:		http://www.centerim.org/download/releases/%{name}-%{version}.tar.gz
