@@ -9,7 +9,7 @@ Group:		Networking/Instant messaging
 Source:		http://www.centerim.org/download/releases/%{name}-%{version}.tar.gz
 Patch0:         centerim-4.22.6-url-escape-fedora.patch
 Patch1:         centerim-gcc46.patch
-URL:		http://www.centerim.org
+URL:		https://www.centerim.org
 BuildRequires:	liblzo-devel 
 BuildRequires:	autoconf
 BuildRequires:	pkgconfig(ncurses)
