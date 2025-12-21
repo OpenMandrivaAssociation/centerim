@@ -10,6 +10,10 @@ Source:		http://www.centerim.org/download/releases/%{name}-%{version}.tar.gz
 Patch0:         centerim-4.22.6-url-escape-fedora.patch
 Patch1:         centerim-gcc46.patch
 URL:		https://www.centerim.org
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	liblzo-devel 
 BuildRequires:	autoconf
 BuildRequires:	pkgconfig(ncurses)
